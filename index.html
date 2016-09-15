@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Pokedex</title>
+</head>
+
+<body ng-controller="MainController">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="top">
+					<input class="center-block" type="number" ng-model="searchInput">
+					<button class="center-block" type="button" class="btn btn-danger" ng-click="findPoke()">Search</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h3>
+				<br> Name: {{pokemon.name}}<br>
+				<br>Attack: {{pokemon.attack}}<br>
+				<br>Ability: {{pokemon.moves[0].name}}<br>
+				<br><img src="'http://pokeapi.co/'+{{pokemon.sprite.image}}" alt="">
+				</h3>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="pokedexservice.js"></script>
+</body>
+
+</html>

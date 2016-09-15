@@ -1,0 +1,13 @@
+body {
+	background: url(ash.jpg) no-repeat center center fixed;
+	position: fixed;
+	background-size: 100% 100%;
+}
+
+#top {
+	padding-top: 100px;
+}
+
+.col-xs-12 {
+	text-align: center;
+}
